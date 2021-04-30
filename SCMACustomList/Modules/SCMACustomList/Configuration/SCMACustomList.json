@@ -1,0 +1,13 @@
+{
+    "type": "object",
+    "properties": { 
+        "SCMACustomList.config": {
+            "group": "extensions",
+            "subtab": "SCMACustomList_subtab",
+            "type": "string",
+            "title": "SCMACustomList_Title",
+            "description": "Config description example",
+            "default": "Default config example"
+        }
+    }
+}
