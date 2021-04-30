@@ -22,17 +22,17 @@ define('SCMACustomList.View', [
 
           // load data
           var self = this,
-              url = "/app/site/hosting/scriptlet.nl?script=1191&deploy=1"
-              //data = { "salesorderid": parseInt(this.params.salesorderid, 10) };
-
+              url = "/app/site/hosting/scriptlet.nl?script=1191&deploy=1";
+              //data = { "customerid": parseInt(, 10) };
+debugger
           jQuery.ajaxSetup({ cache: false });
 
           //var projects = jQuery.get(url, data).fail(function (data) {
-          var projects = jQuery.get(url).fail(function (data) {
+          var assets = jQuery.get(url).fail(function (data) {
               console.log("Error:", data);
           });
 
-          jQuery.when(projects).done(function(assets) {
+          jQuery.when(assets).done(function(assets) {
               self.model.set({assets: assets});
               // render the content
               self.showContent();

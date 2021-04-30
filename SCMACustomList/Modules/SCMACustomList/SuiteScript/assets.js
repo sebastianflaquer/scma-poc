@@ -5,16 +5,16 @@ function myAccountAssets(request, response) {
     var custid = request.getParameter('customerid');
 
     // Load Assets
-    if (custid) {
+    //if (custid) {
         response.setContentType('JSON');
 
-        var search = nlapiLoadSearch('customrecord_sdg_assets', 566);
-        search.addFilter(new nlobjSearchFilter('custrecord_customer', null, 'is', custid));
+        var search = nlapiLoadSearch('customrecord_assets','customsearch_sdg_assets');
+        //search.addFilter(new nlobjSearchFilter('custrecord_customer', null, 'is', custid));
 
         var resultSet = search.runSearch().getResults(0, 999);
 
         response.write(JSON.stringify(resultSet));
-    }
+    //}
 
     // if (assetId) {
     //     var objCustomer = nlapiLoadRecord('customer', custid);
