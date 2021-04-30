@@ -1,99 +1,111 @@
 {
-  "fantasyName": "MyAccount CustomList",
-  "name": "SCMACustomList",
-  "version": "1.0.0",
-  "vendor": "Acme",
-  "type": "extension",
-  "target": "SCS,SCA",
-  "description": "My cool extension does magic!",
-  "assets": {
-    "img": {
-      "files": []
+    "name": "SCMACustomList",
+    "fantasyName": "MyAccount CustomList",
+    "vendor": "Acme",
+    "version": "1.0.0",
+    "type": "extension",
+    "target": "SCS,SCA",
+    "target_version": {
+        "SCS": ">=21.1.0",
+        "SCA": ">=21.1.0"
     },
-    "fonts": {
-      "files": []
+    "description": "My cool extension does magic!",
+    "skins": [],
+    "assets": {
+        "img": {
+            "files": []
+        },
+        "fonts": {
+            "files": []
+        },
+        "services": {
+            "files": [
+                "services/SCMACustomList.Service.ss"
+            ]
+        }
     },
-    "services": {
-      "files": [
-        "services/SCMACustomList.Service.ss"
-      ]
+    "configuration": {
+        "files": [
+            "Modules/SCMACustomList/Configuration/SCMACustomList.json"
+        ]
+    },
+    "sass": {
+        "entry_points": {
+            "shopping": "Modules/SCMACustomList/Sass/_scmacustomlist-scmacustomlist.scss",
+            "myaccount": "Modules/SCMACustomList/Sass/_scmacustomlist-scmacustomlist.scss",
+            "checkout": "Modules/SCMACustomList/Sass/_scmacustomlist-scmacustomlist.scss"
+        },
+        "files": [
+            "Modules/SCMACustomList/Sass/_scmacustomlist-scmacustomlist.scss"
+        ]
+    },
+    "templates": {
+        "application": {
+            "shopping": {
+                "files": [
+                    "Modules/SCMACustomList/Templates/customlist_details.tpl"
+                ]
+            },
+            "myaccount": {
+                "files": [
+                    "Modules/SCMACustomList/Templates/customlist_details.tpl"
+                ]
+            },
+            "checkout": {
+                "files": [
+                    "Modules/SCMACustomList/Templates/customlist_details.tpl"
+                ]
+            }
+        }
+    },
+    "javascript": {
+        "entry_points": {
+            "shopping": "Modules/SCMACustomList/JavaScript/Acme.SCMACustomList.SCMACustomList.js",
+            "myaccount": "Modules/SCMACustomList/JavaScript/Acme.SCMACustomList.SCMACustomList.js",
+            "checkout": "Modules/SCMACustomList/JavaScript/Acme.SCMACustomList.SCMACustomList.js"
+        },
+        "application": {
+            "shopping": {
+                "files": [
+                    "Modules/SCMACustomList/JavaScript/Acme.SCMACustomList.SCMACustomList.js",
+                    "Modules/SCMACustomList/JavaScript/SCMACustomList.View.js",
+                    "Modules/SCMACustomList/JavaScript/Acme.SCMACustomList.SCMACustomList.SS2Model.js",
+                    "Modules/SCMACustomList/JavaScript/SCMACustomList.Model.js",
+                    "Modules/SCMACustomList/JavaScript/SCMACustomList.Router.js"
+                ]
+            },
+            "myaccount": {
+                "files": [
+                    "Modules/SCMACustomList/JavaScript/Acme.SCMACustomList.SCMACustomList.js",
+                    "Modules/SCMACustomList/JavaScript/SCMACustomList.View.js",
+                    "Modules/SCMACustomList/JavaScript/Acme.SCMACustomList.SCMACustomList.SS2Model.js",
+                    "Modules/SCMACustomList/JavaScript/SCMACustomList.Model.js",
+                    "Modules/SCMACustomList/JavaScript/SCMACustomList.Router.js"
+                ]
+            },
+            "checkout": {
+                "files": [
+                    "Modules/SCMACustomList/JavaScript/Acme.SCMACustomList.SCMACustomList.js",
+                    "Modules/SCMACustomList/JavaScript/SCMACustomList.View.js",
+                    "Modules/SCMACustomList/JavaScript/Acme.SCMACustomList.SCMACustomList.SS2Model.js",
+                    "Modules/SCMACustomList/JavaScript/SCMACustomList.Model.js",
+                    "Modules/SCMACustomList/JavaScript/SCMACustomList.Router.js"
+                ]
+            }
+        }
+    },
+    "ssp-libraries": {
+        "entry_point": "Modules/SCMACustomList/SuiteScript/Acme.SCMACustomList.SCMACustomList.js",
+        "files": [
+            "Modules/SCMACustomList/SuiteScript/Acme.SCMACustomList.SCMACustomList.js",
+            "Modules/SCMACustomList/SuiteScript/SCMACustomList.ServiceController.js",
+            "Modules/SCMACustomList/SuiteScript/assets.js"
+        ]
+    },
+    "local_folder": "Workspace/SCMACustomList",
+    "suitescript2": {
+        "files": [
+            "Modules/SCMACustomList/SuiteScript2/SCMACustomList.Service.ss"
+        ]
     }
-  },
-  "suitescript2": {
-    "files": [
-      "Modules/SCMACustomList/SuiteScript2/SCMACustomList.Service.ss"
-    ]
-  },
-  "target_version": {
-    "SCS": ">=21.1.0",
-    "SCA": ">=21.1.0"
-  },
-  "javascript": {
-    "entry_points": {
-      "shopping": "Modules/SCMACustomList/JavaScript/Acme.SCMACustomList.SCMACustomList.js",
-      "myaccount": "Modules/SCMACustomList/JavaScript/Acme.SCMACustomList.SCMACustomList.js",
-      "checkout": "Modules/SCMACustomList/JavaScript/Acme.SCMACustomList.SCMACustomList.js"
-    },
-    "application": {
-      "shopping": {
-        "files": [
-          "Modules/SCMACustomList/JavaScript/Acme.SCMACustomList.SCMACustomList.js",
-          "Modules/SCMACustomList/JavaScript/SCMACustomList.View.js"
-        ]
-      },
-      "myaccount": {
-        "files": [
-          "Modules/SCMACustomList/JavaScript/Acme.SCMACustomList.SCMACustomList.js",
-          "Modules/SCMACustomList/JavaScript/SCMACustomList.View.js"
-        ]
-      },
-      "checkout": {
-        "files": [
-          "Modules/SCMACustomList/JavaScript/Acme.SCMACustomList.SCMACustomList.js",
-          "Modules/SCMACustomList/JavaScript/SCMACustomList.View.js"
-        ]
-      }
-    }
-  },
-  "ssp-libraries": {
-    "entry_point": "Modules/SCMACustomList/SuiteScript/Acme.SCMACustomList.SCMACustomList.js",
-    "files": [
-      "Modules/SCMACustomList/SuiteScript/Acme.SCMACustomList.SCMACustomList.js",
-      "Modules/SCMACustomList/SuiteScript/SCMACustomList.ServiceController.js"
-    ]
-  },
-  "templates": {
-    "application": {
-      "shopping": {
-        "files": [
-          "Modules/SCMACustomList/Templates/acme_scmacustomlist_scmacustomlist.tpl"
-        ]
-      },
-      "myaccount": {
-        "files": [
-          "Modules/SCMACustomList/Templates/acme_scmacustomlist_scmacustomlist.tpl"
-        ]
-      },
-      "checkout": {
-        "files": [
-          "Modules/SCMACustomList/Templates/acme_scmacustomlist_scmacustomlist.tpl"
-        ]
-      }
-    }
-  },
-  "sass": {
-    "entry_points": {
-      "shopping": "Modules/SCMACustomList/Sass/_scmacustomlist-scmacustomlist.scss",
-      "myaccount": "Modules/SCMACustomList/Sass/_scmacustomlist-scmacustomlist.scss",
-      "checkout": "Modules/SCMACustomList/Sass/_scmacustomlist-scmacustomlist.scss"
-    },
-    "files": [
-      "Modules/SCMACustomList/Sass/_scmacustomlist-scmacustomlist.scss"
-    ]
-  },
-  "configuration": {
-    "files": [
-      "Modules/SCMACustomList/Configuration/SCMACustomList.json"
-    ]
-  }
 }
