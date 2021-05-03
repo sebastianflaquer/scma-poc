@@ -33,10 +33,15 @@ debugger
           });
 
           jQuery.when(assets).done(function(assets) {
+              this.parseResults(assets);
               self.model.set({assets: assets});
               // render the content
               self.showContent();
           });
+      },
+
+      parseResults: function (assets) {
+debugger
       },
 
       getSelectedMenu: function getSelectedMenu() {
