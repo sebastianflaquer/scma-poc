@@ -6,26 +6,36 @@
 
 <div class="invoice-open-list-body">
   <div class="row stored-assets-list">
-    <div class="col-sm-2 stai-id overview-home-content-table-header-row-title">
+    <div class="col-sm-2 stai-id">
       <span>Id</span>
     </div>
-    <div class="col-sm-6 stai-name overview-home-content-table-header-row-title">
+    <div class="col-sm-4 stai-name">
       <span>Name</span>
     </div>
-    <div class="col-sm-4 stai-img overview-home-content-table-header-row-title">
+    <div class="col-sm-3 stai-img">
       <span>Image</span>
+    </div>
+    <div class="col-sm-3 stai-img">
+      <span>Actions</span>
     </div>
   </div>
   {{#each assets}}
+
   <div class="row stored-assets-list">
+
     <div class="col-sm-2 stai-id">
       <span>{{id}}<span>
     </div>
-    <div class="col-sm-6 stai-name">
+    <div class="col-sm-4 stai-name">
       <span>{{name}}</span>
     </div>
-    <div class="col-sm-4 stai-img">
+    <div class="col-sm-3 stai-img">
       <img src="{{image}}" />
+    </div>
+    <div class="col-sm-3 stai-img">
+      <a href="" class=“balance-print-button”>Edit</a> |
+      <a href="" class=“balance-print-button”>Remove</a> |
+      <a href="" class=“balance-print-button”>Publish</a>
     </div>
   </div>
   {{/each}}
