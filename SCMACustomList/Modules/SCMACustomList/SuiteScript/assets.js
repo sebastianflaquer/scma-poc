@@ -11,6 +11,7 @@ function myAccountAssets(request, response) {
         var search = nlapiLoadSearch('customrecord_assets','customsearch_sdg_assets');
         //search.addFilter(new nlobjSearchFilter('custrecord_customer', null, 'is', custid));
 
+        // Returns a nlobjSearchResult
         var resultSet = search.runSearch().getResults(0, 999);
 
         response.write(JSON.stringify(resultSet));

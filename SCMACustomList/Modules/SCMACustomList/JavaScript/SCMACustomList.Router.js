@@ -42,8 +42,9 @@ define('SCMACustomList.Router', [
                     model: model
                     //params: options
             });
-
-            return view.showContent();
+debugger
+            var Layout = application.getComponent('Layout');
+            return Layout.showContent(view, {});
         }
     });
 });

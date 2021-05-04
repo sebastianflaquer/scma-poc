@@ -2,12 +2,14 @@ define('SCMACustomList.View', [
     'customlist_details.tpl',
     'Backbone',
 
-    'jQuery'
+    'jQuery',
+    'underscore'
 ], function CustomListDetailsView(
     assetsDetailsTpl,
     Backbone,
 
     jQuery,
+    _
 ) {
     'use strict';
 
@@ -18,13 +20,14 @@ define('SCMACustomList.View', [
       initialize: function initialize(options) {
           this.application = options.application;
           this.model = options.model;
-          this.params = options.params;
+          //this.params = options.params;
+          this.Layout = options.application.getComponent('Layout');
 
           // load data
           var self = this,
               url = "/app/site/hosting/scriptlet.nl?script=1191&deploy=1";
               //data = { "customerid": parseInt(, 10) };
-debugger
+
           jQuery.ajaxSetup({ cache: false });
 
           //var projects = jQuery.get(url, data).fail(function (data) {
@@ -33,15 +36,22 @@ debugger
           });
 
           jQuery.when(assets).done(function(assets) {
-              this.parseResults(assets);
-              self.model.set({assets: assets});
-              // render the content
-              self.showContent();
+              var myAssets = self.parseResults(assets);
+              self.model.set({assets: myAssets});
+debugger
+              // Show the view with data
+              return self.Layout.showContent(self, {});
           });
       },
 
-      parseResults: function (assets) {
-debugger
+      parseResults: function (searchResults) {
+          return _.map(searchResults, function(result) {
+              return {
+                  id: result.columns.id,
+                  name: result.columns.name,
+                  image: result.columns.custrecord_image.name
+              };
+          });
       },
 
       getSelectedMenu: function getSelectedMenu() {
@@ -68,13 +78,10 @@ debugger
 
         getContext: function ()
         {
-            // var label = this.model.get('label'),
-            // company = (Configuration.get('siteSettings.registration.displaycompanyfield') === 'T') ? this.model.get('company') : null,
-            // fullname = this.model.get('fullname');
-
+            var assets = this.model.get('assets');
+debugger;
             return {
-                // model: this.model,
-                // company: company
+                assets: assets
             };
         }
 
