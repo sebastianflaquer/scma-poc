@@ -14,7 +14,7 @@ function myAccountAssets(request, response) {
         // Returns a nlobjSearchResult
         var resultSet = search.runSearch().getResults(0, 999);
 
-        response.write(JSON.stringify(resultSet));
+        response.write(JSON.stringify(resultSet) || {});
     //}
 
     // if (assetId) {
