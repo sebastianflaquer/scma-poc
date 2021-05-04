@@ -19,10 +19,10 @@
   {{#each assets}}
   <div class="row stored-assets-list">
     <div class="col-sm-2 stai-id">
-      {{id}}
+      <span>{{id}}<span>
     </div>
     <div class="col-sm-6 stai-name">
-      {{name}}
+      <span>{{name}}</span>
     </div>
     <div class="col-sm-4 stai-img">
       <img src="{{image}}" />
