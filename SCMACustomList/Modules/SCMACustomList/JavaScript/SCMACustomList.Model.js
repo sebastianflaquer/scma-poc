@@ -10,7 +10,6 @@ define("SCMACustomList.Model", ["Backbone", "Utils"], function(
     // @class Case.Fields.Model @extends Backbone.Model
     return Backbone.Model.extend({
 
-
         //@property {String} urlRoot
         urlRoot: Utils.getAbsoluteUrl(
             getExtensionAssetsPath(

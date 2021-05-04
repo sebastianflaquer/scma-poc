@@ -23,17 +23,10 @@ define('SCMACustomList.Router', [
             'stored-assets': 'viewAllAssets'
         },
 
-        initialize: function initialize(application) {
-            this.application = application;
+        initialize: function initialize(options) {
+            this.application = options.container;
         },
 
-        // achpayment: function achpayment() {
-        //     var view = new CustomListDetailsAchView({
-        //         application: this.application
-        //     });
-        //
-        //     return view.showContent();
-        // },
         viewAllAssets: function viewAllAssets(options) {
             //options = SC.Utils.parseUrlOptions(options);
             var model = new Model(),
@@ -42,9 +35,9 @@ define('SCMACustomList.Router', [
                     model: model
                     //params: options
             });
-debugger
-            var Layout = application.getComponent('Layout');
-            return Layout.showContent(view, {});
+            //var Layout = application.getComponent('Layout');
+            //return view.showContent(view, {});
         }
+
     });
 });

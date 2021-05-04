@@ -38,7 +38,7 @@ define('SCMACustomList.View', [
           jQuery.when(assets).done(function(assets) {
               var myAssets = self.parseResults(assets);
               self.model.set({assets: myAssets});
-debugger
+//debugger
               // Show the view with data
               return self.Layout.showContent(self, {});
           });
@@ -79,7 +79,7 @@ debugger
         getContext: function ()
         {
             var assets = this.model.get('assets');
-debugger;
+//debugger;
             return {
                 assets: assets
             };

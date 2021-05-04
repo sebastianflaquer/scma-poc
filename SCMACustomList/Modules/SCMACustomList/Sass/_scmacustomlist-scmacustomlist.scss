@@ -5,7 +5,7 @@
 	Example:
 	@import "other-sass-file.scss";
 	@import "../../<other module>/Sass/other-sass-file.scss";
-*/ 
+*/
 
 .scmacustomlist-info-card {
     @extend .info-card;
@@ -15,4 +15,17 @@
     @extend .info-card-content;
     color: $sc-color-secondary;
     font-weight: bold;
+}
+
+.stored-assets-list{
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  padding: 15px;
+  .stai-id{
+  }
+  .stai-name{
+  }
+  .stai-image{
+    width: 100%;
+  }
 }

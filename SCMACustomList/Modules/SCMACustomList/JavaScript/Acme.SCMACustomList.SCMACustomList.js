@@ -38,7 +38,9 @@ define(
 				});*/
 			}
 
-			return new SCMACustomListRouter({ container: container });
+			return new SCMACustomListRouter({
+				container: container
+			});
 
 		}
 	};
