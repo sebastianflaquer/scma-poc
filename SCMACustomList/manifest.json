@@ -102,7 +102,7 @@
             "Modules/SCMACustomList/SuiteScript/assets.js"
         ]
     },
-    "local_folder": "Workspace\\SCMACustomList",
+    "local_folder": "Workspace/SCMACustomList",
     "suitescript2": {
         "files": [
             "Modules/SCMACustomList/SuiteScript2/SCMACustomList.Service.ss"
